@@ -4,13 +4,13 @@ import './App.css'
 
 const ListComponent = ({listData}) => {
   return (
-    <div className='list-Container'>
-       <ol>
+    
+       <ol className='list-container'>
             {listData.map((item, id) => (
              <li key={id} className='list-item'>{item.body}</li>
             ) )}
         </ol>
-    </div>
+    
   )
 }
 
