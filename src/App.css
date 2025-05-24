@@ -3,14 +3,15 @@ body {
   background-color: burlywood;
   margin: 0;
   padding: 0;
-  height: 100px;
+  min-height: 100%;
 }
 .wrapper {
   display: flex;
   flex-direction:column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .Apifetching {
@@ -53,11 +54,13 @@ p {
 }
 
 
-.list-Container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);  
+  grid-template-rows: repeat(20, auto); 
+  gap: 20px;
+  padding: 40px;
+  max-width: 100%;
 }
 
 .list-item {
@@ -65,18 +68,12 @@ p {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  width: 90%;
-  max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   color: #2c3e50;
   min-height: 120px;
-  box-sizing: border-box;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px auto;
+  overflow-y: auto;
 }
 
 
